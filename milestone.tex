@@ -1,0 +1,27 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+
+\title{ISyE 6644 Project Milestone}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Team:} [Full name of every team member, including yourself]\\
+\textbf{Project Topic:} 1 (Digital Twins)
+
+\subsection*{Progress to date}
+We selected Project 1 and framed it as a digital twin of a warehouse order-fulfillment process. We are using the DataCo Supply Chain dataset (Kaggle), which contains 180,519 line items for 65,752 unique orders placed between January 2015 and January 2018. After excluding 2,855 orders marked as shipping canceled, we estimated the order arrival rate at 0.0388 orders per minute (2.33 per hour); arrivals are flat across the hours of the day. We built a discrete-event simulation in Python with SimPy 4.1.1, covering pick, quality control with rework, pack, and batch dispatch stages, and ran it under three staffing configurations using the calibrated arrival rate. The pipeline runs end to end and produces metrics tables, plots, and a text report.
+
+\subsection*{Remaining work}
+The model is preliminary. Service times, the 5\% QC failure rate, and labor costs are assumptions not yet derived from the data or sourced. The observed inter-arrival coefficient of variation is 0.44, while the simulation assumes exponential arrivals (coefficient 1.0). Throughput is currently computed over a horizon that includes idle time, and the wait-time calculation needs correction. Still to do: fix these calculations; validate simulated outputs against observed data; run replications with warm-up deletion and 95\% confidence intervals; select a decision question the data can answer; write the literature review on digital twins and simulation-based decision making; and build a parameter-sourcing table.
+
+\subsection*{AI use statement}
+[Each team member should confirm and complete this: name the tool, the parts of the work it helped with, and what was changed or verified by the team.]
+
+\end{document}

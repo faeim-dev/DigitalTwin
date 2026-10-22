@@ -1,0 +1,4 @@
+Scenario,Orders Completed,Throughput (orders/hr),Avg Fulfillment (min),Avg Wait (min),Picker Util. (%),QC Util. (%),Packer Util. (%),Total Labor Cost ($),Cost/Order ($),Rework Rate (%)
+Baseline (Current),62897,2.21,39.40,30.40,4.9,3.9,5.5,$3757248,$59.74,5.32
+Speed (More Resources),62897,2.21,39.30,30.30,3.7,2.6,3.7,$5351232,$85.08,5.29
+Lean (Fewer Resources),62897,2.21,39.46,30.46,7.4,7.8,11.0,$2163264,$34.39,5.35
